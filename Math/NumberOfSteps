@@ -1,0 +1,16 @@
+class Solution:
+    def numberOfSteps(self, num: int) -> int:
+        #create a variable that will be incremented every time we divide or subtract from num
+        stepCount = 0
+        while(num != 0):
+            if((num % 2) == 0):
+                num/=2
+                stepCount+=1
+            else:
+                num-=1
+                stepCount+=1
+        print(stepCount)
+        return stepCount
+    
+solution = Solution()
+solution.numberOfSteps(14)
